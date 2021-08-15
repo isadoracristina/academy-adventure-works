@@ -36,11 +36,31 @@ sources:
             testes:
               - not null
 
+      - name: countryregion
+        description: >
+          Country Region.
+        columns:
+          - name: countryregioncode
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
       - name: creditcard
         description: >
           Credit Card.
         columns:
           - name: creditcardid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: customer
+        description: >
+          Customer.
+        columns:
+          - name: customerid
             description: Primary Key
             testes:
               - unique
@@ -107,16 +127,6 @@ sources:
           Sales Reason.
         columns:
           - name: salesreasonid
-            description: Primary Key
-            testes:
-              - unique
-              - not null
-
-      - name: salesterritory
-        description: >
-          Sales Territory.
-        columns:
-          - name: territoryid
             description: Primary Key
             testes:
               - unique

@@ -1,15 +1,18 @@
 with
     source as (
         select
-            countryregioncode,
-            name,
+            customerid,
+            personid,
+            storeid,
+            territoryid,
             modifieddate,
 
+            rowguid,
             _sdc_sequence,
             _sdc_table_version,
             _sdc_received_at,
             _sdc_batched_at
-        from {{ source('adventureworks', 'countryregion') }}
+        from {{ source('adventureworks', 'customer') }}
     )
 
 select * from source
