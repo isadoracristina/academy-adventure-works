@@ -3,7 +3,7 @@ version: 2
 sources:
 
   - name: adventureworks
-    description: This is a replica of the Postgres database used by our client. 
+    description: This is a replica of the Postgres database used by our client.
 
     tables:
 
@@ -104,6 +104,26 @@ sources:
               - unique
               - not null
 
+      - name: salesorderheader
+        description: >
+          Sales Order Header.
+        columns:
+          - name: salesorderid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: salesorderdetail
+        description: >
+          Sales Order Detail.
+        columns:
+          - name: salesorderdetailid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
       - name: salesorderheadersalesreason
         description: >
           Sales Order Header Sales Reason.
@@ -127,6 +147,16 @@ sources:
           Sales Reason.
         columns:
           - name: salesreasonid
+            description: Primary Key
+            testes:
+              - unique
+              - not null
+
+      - name: shipmethod
+        description: >
+          Ship Method.
+        columns:
+          - name: shipmethodid
             description: Primary Key
             testes:
               - unique
