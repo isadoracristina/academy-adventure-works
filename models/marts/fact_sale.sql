@@ -49,6 +49,7 @@ with
             billtoaddressid as bill_address_id,
             shiptoaddressid as ship_address_id,
             sales_order_detail.productid as product_id,
+            sales_order_detail.orderqty as order_quantity,
             sales_order_detail.specialofferid as special_offer_id,
             sale.customerid as customer_id,
 
